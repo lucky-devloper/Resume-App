@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hide{
+    display: none;
+}
+
+@media(max-width:870px){
+    .form-details{
+        width: 700px;
+    }
+    .form-container .additional-info .info{
+        width: 190px;
+    }
+    .form-details .additional-info label{
+        font-size: 15px;
+    }
+    .basic-details{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .basic-details .info-2 select{
+        width: 180px;
+    }
+    .basic-details .info-2 input{
+        width: 180px;
+    }
+    .basic-details .info-2 label{
+        font-size: 15px;
+    }
+
+    .education-details .info-3 label{
+        font-size: 15px;
+    }
+    .add-project h1{
+        font-size: 20px;
+    }
+    .add-project p{
+        font-size: 15px;
+    }
+    .add-project button{
+        font-size: 20px;
+    }
+    .Project p{
+        font-size: 15px;
+    }
+    .Project h2{
+        font-size: 15px;
+    }
+    .Project textarea{
+        width: 550px;
+    }
+    .skill-form h1{
+        font-size: 20px;
+    }
+    .skill-form label{
+        font-size: 15px;
+        font-weight: bold;
+    }
+}

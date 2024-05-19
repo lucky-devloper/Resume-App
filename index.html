@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Application</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body class="flex justify-center w-[100%] h-[100vh] ">
+  <div id="app">
+    <!-- Form input section -->
+    <div class="form-container w-[100%] h-[100vh">
+      <form class="border-[2px] border-blue-600 p-4 mt-3" action="">
+        <h1 class="text-center text-4xl">Resume</h1>
+        <div class="form-details border-[2px] border-blue-600 flex flex-col py-2">
+          <!-- name and dob -->
+          <div class="additional-info grid grid-cols-3 gap-2 mx-3">
+            <div class="info flex flex-col">
+              <label class="text-xl font-semibold mr-2" for="">Name</label>
+              <input class="Name border-[2px] border-black p-2 outline-none" type="text" placeholder="Enter name">
+            </div>
+            <div class="info flex flex-col">
+              <label class="text-xl font-semibold mr-2" for="">Surname</label>
+              <input class="surname border-[2px] border-black p-2 outline-none" type="text" placeholder="Last name">
+            </div>
+            <div class="info flex flex-col">
+              <label class="text-xl font-semibold mr-2" for="">D.O.B</label>
+              <input class="dob border-[2px] border-black p-2" type="date">
+            </div>
+          </div>
+
+          <!-- contact location and gender -->
+          <div class="basic-details grid grid-cols-4 gap-2 mx-3">
+
+            <!-- location -->
+            <div class="info-2 flex flex-col">
+              <label class="text-xl font-semibold" for="">Current Location</label>
+              <input class="location border-[2px] border-black p-2 outline-none w-[200px]" type="text"
+                placeholder="Enter location">
+            </div>
+
+            <!-- Email -->
+            <div class="info-2 flex flex-col">
+              <label class="text-xl font-semibold" for="">Email Address</label>
+              <input class="useremail border-[2px] border-black p-2 outline-none w-[200px]" type="email"
+                placeholder="Email Address">
+            </div>
+
+            <!-- gender -->
+            <div class="info-2 flex flex-col ">
+              <label class="text-xl font-semibold" for="">Gender</label>
+              <select name="Gender" id="" class="gender border-[2px] border-black p-2 outline-none w-[200px]">
+                <option value="">Choose gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="info-2 flex flex-col">
+              <label class="text-xl font-semibold" for="">Mobile Number</label>
+              <input class="usernumber border-[2px] border-black p-2 outline-none w-[200px]" type="number"
+                placeholder="Enter Number">
+            </div>
+          </div>
+
+          <!-- educational details -->
+          <div class="education-details mx-3 my-2">
+            <h1 class="font-semibold text-2xl border-b-[2px] border-black">Educational Details</h1>
+            <div class="education grid grid-cols-4 gap-3 mt-3">
+              <div class="info-3 flex flex-col">
+                <label class="text-xl font-semibold" for="">10th School/College</label>
+                <input class="school border-[2px] border-black p-2 outline-none" type="text" placeholder="Enter name">
+              </div>
+              <div class="info-3 flex flex-col">
+                <label class="text-xl font-semibold" for="">Board</label>
+                <input class="board-ten border-[2px] border-black p-2 outline-none" type="text" placeholder="Last name">
+              </div>
+              <div class="info-3 flex flex-col">
+                <label class="text-xl font-semibold" for="">Percentage</label>
+                <input class="percent-ten border-[2px] border-black p-2 outline-none" type="number">
+              </div>
+              <div class="info-3 flex flex-col">
+                <label class="text-xl font-semibold" for="">Passing Year</label>
+                <input class="inter-passing-year border-[2px] border-black p-2 outline-none" type="number">
+              </div>
+              <div class="info-3 flex flex-col">
+                <label class="text-xl font-semibold" for="">12th School/College</label>
+                <input class="school12th border-[2px] border-black p-2 outline-none" type="text"
+                  placeholder="Enter name">
+              </div>
+              <div class="info-3 flex flex-col">
+                <label class="text-xl font-semibold" for="">Board</label>
+                <input class="board-inter border-[2px] border-black p-2 outline-none" type="text"
+                  placeholder="Last name">
+              </div>
+              <div class="info-3 flex flex-col">
+                <label class="text-xl font-semibold" for="">Percentage</label>
+                <input class="percent-inter border-[2px] border-black p-2 outline-none" type="number">
+              </div>
+              <div class="info-3 flex flex-col">
+                <label class="text-xl font-semibold" for="">Passing Year</label>
+                <input class="intermediate-passing-year border-[2px] border-black p-2 outline-none" type="number">
+              </div>
+              <div class="info-3 flex flex-col">
+                <label class="text-xl font-semibold" for="">Graduation/Course</label>
+                <input class="coursename border-[2px] border-black p-2 outline-none" type="text"
+                  placeholder="Enter name">
+              </div>
+              <div class="info-3 flex flex-col">
+                <label class="text-xl font-semibold" for="">University</label>
+                <input class="university border-[2px] border-black p-2 outline-none" type="text"
+                  placeholder="Last name">
+              </div>
+              <div class="info-3 flex flex-col">
+                <label class="text-xl font-semibold" for="">Percentage</label>
+                <input class="universitypercentage border-[2px] border-black p-2 outline-none" type="number">
+              </div>
+              <div class="info-3 flex flex-col">
+                <label class="text-xl font-semibold" for="">Passing Year</label>
+                <input class="graduation-passing-year border-[2px] border-black p-2 outline-none" type="number">
+              </div>
+            </div>
+          </div>
+
+          <!-- Add projects -->
+          <div class="add-project mx-3 w-[97%] px-3 py-2 border-[2px] border-black rounded-[10px]">
+            <div class="relative">
+              <h1 class="text-2xl">Projects</h1>
+              <p class="text-gray-600 text-[20px]">Talk about your projects that made you proud and contributed to your
+                learning</p>
+              <button class="addbtn text-2xl text-[#265df5] font-bold p-1 absolute top-0 right-0">Add</button>
+            </div>
+          </div>
+
+          <!-- Project details -->
+          <div class="hide Project px-3 py-2 border-[2px] border-black mx-3">
+            <h1 class="font-semibold text-2xl">Project</h1>
+            <p>Showcase your talent with the best projects you have worked on during college and work</p>
+            <h2 class="text-xl font-semibold mt-2">Project name</h2>
+            <input class="projectname border-[2px] border-black w-[100%] py-2 px-1 outline-none" type="text"
+              placeholder="Enter the name of the project you worked on">
+            <div class="project-duration">
+              <h2 class="text-xl font-semibold mt-2">Project duration</h2>
+              <div class="flex gap-7 items-center">
+                <input class="startmonth border-[2px] border-black p-2 rounded-[4px] outline-none" type="month"
+                  placeholder="month">
+                <h2 class="text-[20px] font-semibold">to</h2>
+                <input class="endmonth border-[2px] border-black p-2 rounded-[4px] outline-none" type="month"
+                  placeholder="month">
+              </div>
+            </div>
+            <h2 class="text-xl font-semibold mt-2">Describe what the project was about</h2>
+            <textarea class="projectbrif border-[2px] border-black px-3 py-2 outline-none" name="" id="" cols="102"
+              rows="3"
+              placeholder="Enter your learnings throughout the process of making file project and what you liked the most about it"></textarea>
+            <h2 class="text-xl font-semibold mt-2">Key skill used in the project(optional)</h2>
+            <input class="useskill border-[2px] border-black w-[100%] py-2 px-2 outline-none" type="text">
+            <button
+              class="savebtn float-end mt-2 text-white font-bold bg-blue-800 py-2 px-4 border-none rounded-[20px]">Save</button>
+          </div>
+
+          <!-- Skill and Achievement -->
+          <div class="skill-form px-3 py-2">
+            <h1 class="font-semibold text-2xl border-b-[2px] border-black">Skill And Achievements</h1>
+            <div class="flex flex-col mt-2">
+              <label class="font-normal text-xl" for="">Skill</label>
+              <input class="myskill border-[2px] border-black p-2 outline-none" type="text">
+            </div>
+            <div class="flex flex-col mt-2">
+              <label class="font-normal text-xl" for="">Language</label>
+              <select name="language" id="" class="language w-[200px] border-[2px] border-black p-2 outline-none">
+                <option value="">Choose Language</option>
+                <option value="Hindi">Hindi</option>
+                <option value="English">English</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- submit button -->
+          <button
+            class="formbtn w-[100px] text-white font-semibold bg-red-700 border-none rounded-[4px] py-2 mx-3">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ***************************************** Resume Section *********************************** -->
+    <!-- resume section -->
+    <div class="hide resume-container w-[1000px] h-full" id="resume-template">
+      <div class="resume-name p-4 bg-gray-100">
+      </div>
+      <!-- personal -->
+      <div class="personal-del mt-4">
+        <h1 class="text-2xl font-semibold border-b-[1px] border-black pb-3"><i class="text-amber-700 fa-regular fa-address-book"></i> PERSONAL DETAILS</h1>
+        <div class="flex gap-7 mt-4">
+          <div class="1">
+            <p>Current Location</p>
+            <p>Date of birth</p>
+            <p>Gender</p>
+          </div>
+          <div class="data">
+          </div>
+        </div>
+      </div>
+      <!-- education -->
+      <div class="education-del mt-4">
+        <h1 class="text-2xl font-semibold border-b-[1px] border-black pb-3"><i
+            class="text-amber-700 fa-solid fa-user-graduate"></i> EDUCATION</h1>
+        <div class="flex gap-7 mt-4">
+          <div class="flex flex-col gap-6">
+            <p>Graduation</p>
+            <p>Class XII</p>
+            <p>Class X</p>
+          </div>
+          <div class="course">
+
+          </div>
+        </div>
+      </div>
+      <!-- internship and project -->
+      <div class="project-intern-duration mt-4">
+        <h1 class="text-2xl font-semibold border-b-[1px] border-black pb-3"><i
+            class="text-amber-700 fa-solid fa-cube"></i> INTERNSHIPS AND PROJECTS</h1>
+        <div class="flex gap-7 mt-4">
+          <div class="">
+            <p>Projects</p>
+          </div>
+          <div class="Detail-about-project">
+          </div>
+        </div>
+      </div>
+      <!-- skill and achievement -->
+      <div class="skill-achievment h-[200px] mt-4">
+        <h1 class="text-2xl font-semibold border-b-[1px] border-black pb-3"><i
+            class="text-amber-700 fa-solid fa-screwdriver-wrench"></i> SKILL AND ACHIEVMENTS</h1>
+        <div class="flex gap-8 mt-4">
+          <div class="">
+            <p>Skills</p>
+            <p>Language</p>
+          </div>
+          <div class="knowledge">
+
+          </div>
+        </div>
+      </div>
+      <!-- fill and download button -->
+      <button class="resumebtn w-[100px] text-white font-semibold bg-red-700 border-none rounded-[4px] py-2">Fill
+        Form</button>
+      <button id="downloadPDF"
+        class="download w-[150px] text-white font-semibold bg-red-700 border-none rounded-[4px] py-2">Download PDF</button>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
